@@ -15,6 +15,6 @@ namespace BookStoreApp.DAL
         public int? LastModifiedBy { get; set; }
         public DateTime? DeletedTime { get; set; }
         public int? DeletedBy { get; set; }
-        public bool Isdeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
     }
 }

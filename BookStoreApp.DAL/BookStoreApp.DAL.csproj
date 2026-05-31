@@ -47,17 +47,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEntity.cs" />
-    <Compile Include="Book.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Ebook.cs" />
-    <Compile Include="Genre.cs" />
-    <Compile Include="PrintedBook.cs" />
+    <Compile Include="BookFilter.cs" />
+    <Compile Include="BookRepository.cs" />
+    <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\BookAuthor.cs" />
+    <Compile Include="BookStoreDbContext.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="IBookRepository.cs" />
+    <Compile Include="Migrations\202605270827367_InitialCreate.cs" />
+    <Compile Include="Migrations\202605270827367_InitialCreate.Designer.cs">
+      <DependentUpon>202605270827367_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202605271358086_AddBookCoreRelations.cs" />
+    <Compile Include="Migrations\202605271358086_AddBookCoreRelations.Designer.cs">
+      <DependentUpon>202605271358086_AddBookCoreRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Publisher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202605270827367_InitialCreate.resx">
+      <DependentUpon>202605270827367_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202605271358086_AddBookCoreRelations.resx">
+      <DependentUpon>202605271358086_AddBookCoreRelations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

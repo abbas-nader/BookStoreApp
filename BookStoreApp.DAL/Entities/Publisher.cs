@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BookStoreApp.DAL
 {
-    public class Ebook : Book
+    public class Publisher : BaseEntity
     {
-        public string DownloadLink { get; set; }
-        public decimal FileSize { get; set; }
+        public string Name { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

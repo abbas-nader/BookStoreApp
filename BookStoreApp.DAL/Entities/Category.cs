@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookStoreApp.DAL
 {
-    public class PrintedBook : Book
+    public class Category : BaseEntity
     {
-        public int StockQuantity { get; set; }
-        public string CoverType { get; set; }
-
+        public string Name { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

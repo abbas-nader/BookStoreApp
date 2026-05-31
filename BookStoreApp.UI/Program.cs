@@ -13,7 +13,7 @@ namespace BookStoreApp.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSetup());
+            Application.Run(new frmAddOrEditEmployee());
         }
     }
 }

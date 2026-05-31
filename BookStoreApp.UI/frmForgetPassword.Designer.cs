@@ -35,16 +35,16 @@
             this.txtUserNameOrPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCode = new System.Windows.Forms.Label();
             this.btnLock = new Guna.UI2.WinForms.Guna2Button();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnResetPassword = new Guna.UI2.WinForms.Guna2Button();
-            this.lblCode = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,7 +134,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlMain.BorderRadius = 30;
             this.pnlMain.Controls.Add(this.label1);
             this.pnlMain.Controls.Add(this.lblCode);
@@ -157,6 +157,26 @@
             this.pnlMain.ShadowDecoration.Enabled = true;
             this.pnlMain.Size = new System.Drawing.Size(423, 472);
             this.pnlMain.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(82, 247);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "NewPassword";
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.Location = new System.Drawing.Point(82, 183);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(98, 15);
+            this.lblCode.TabIndex = 19;
+            this.lblCode.Text = "Verification Code";
             // 
             // btnLock
             // 
@@ -227,47 +247,6 @@
             this.btnExit.TabIndex = 18;
             this.btnExit.Text = "Exit";
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Animated = true;
-            this.btnCancel.BorderRadius = 8;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.SystemColors.GrayText;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(85, 407);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(239, 45);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
-            // 
-            // txtCode
-            // 
-            this.txtCode.BackColor = System.Drawing.Color.LightGray;
-            this.txtCode.BorderColor = System.Drawing.Color.Transparent;
-            this.txtCode.BorderRadius = 8;
-            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCode.DefaultText = "";
-            this.txtCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
-            this.txtCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCode.FillColor = System.Drawing.Color.Silver;
-            this.txtCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCode.ForeColor = System.Drawing.Color.Black;
-            this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCode.Location = new System.Drawing.Point(85, 204);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtCode.PlaceholderText = "Enter Verification Code";
-            this.txtCode.SelectedText = "";
-            this.txtCode.Size = new System.Drawing.Size(239, 36);
-            this.txtCode.TabIndex = 3;
-            // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.BackColor = System.Drawing.Color.LightGray;
@@ -293,6 +272,30 @@
             this.txtConfirmPassword.Size = new System.Drawing.Size(239, 36);
             this.txtConfirmPassword.TabIndex = 5;
             // 
+            // txtCode
+            // 
+            this.txtCode.BackColor = System.Drawing.Color.LightGray;
+            this.txtCode.BorderColor = System.Drawing.Color.Transparent;
+            this.txtCode.BorderRadius = 8;
+            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCode.DefaultText = "";
+            this.txtCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCode.FillColor = System.Drawing.Color.Silver;
+            this.txtCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCode.ForeColor = System.Drawing.Color.Black;
+            this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCode.Location = new System.Drawing.Point(85, 204);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtCode.PlaceholderText = "Enter Verification Code";
+            this.txtCode.SelectedText = "";
+            this.txtCode.Size = new System.Drawing.Size(239, 36);
+            this.txtCode.TabIndex = 3;
+            // 
             // btnResetPassword
             // 
             this.btnResetPassword.Animated = true;
@@ -310,25 +313,22 @@
             this.btnResetPassword.TabIndex = 7;
             this.btnResetPassword.Text = "Reset Password";
             // 
-            // lblCode
+            // btnCancel
             // 
-            this.lblCode.AutoSize = true;
-            this.lblCode.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(82, 183);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(98, 15);
-            this.lblCode.TabIndex = 19;
-            this.lblCode.Text = "Verification Code";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 247);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "NewPassword";
+            this.btnCancel.Animated = true;
+            this.btnCancel.BorderRadius = 8;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.SystemColors.GrayText;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(85, 407);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(239, 45);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
             // 
             // frmForgetPassword
             // 
@@ -338,6 +338,7 @@
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmForgetPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmForgetPassword";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();

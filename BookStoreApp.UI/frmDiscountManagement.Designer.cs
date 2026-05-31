@@ -393,6 +393,7 @@
             // 
             // dgvDiscounts
             // 
+            this.dgvDiscounts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiscounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiscounts.Location = new System.Drawing.Point(0, 235);
             this.dgvDiscounts.Name = "dgvDiscounts";
