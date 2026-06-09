@@ -47,8 +47,8 @@ namespace BookStoreApp.DAL
         }
         public async Task UpdateAsync(Book book, int userId)
         {
-            var currentBook = await _dbContext.Books.FindAsync(book.Id);
-            if (currentBook == null) return;
+            var currentBook = await _dbContext.Books.FirstOrDefaultAsync(x=> x.Id == book.Id && !book.IsDeleted);
+            if (currentBook == null || book.IsDeleted) return;
             currentBook.Title = book.Title;
             currentBook.Isbn = book.Isbn;
             currentBook.Price = book.Price;
