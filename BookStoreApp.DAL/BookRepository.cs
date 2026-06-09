@@ -10,9 +10,9 @@ namespace BookStoreApp.DAL
     public class BookRepository : IBookRepository
     {
         private readonly BookStoreDbContext _dbContext;
-        public BookRepository(BookStoreDbContext bookStoreDbContext)
+        public BookRepository()
         {
-            _dbContext = bookStoreDbContext;
+            _dbContext = new BookStoreDbContext();
         }
         public async Task AddAsync(Book book)
         {
@@ -47,8 +47,8 @@ namespace BookStoreApp.DAL
         }
         public async Task UpdateAsync(Book book, int userId)
         {
-            var currentBook = await _dbContext.Books.FirstOrDefaultAsync(x=> x.Id == book.Id && !book.IsDeleted);
-            if (currentBook == null || book.IsDeleted) return;
+            var currentBook = await _dbContext.Books.FirstOrDefaultAsync(x=> x.Id == book.Id && !x.IsDeleted);
+            if (currentBook == null) return;
             currentBook.Title = book.Title;
             currentBook.Isbn = book.Isbn;
             currentBook.Price = book.Price;

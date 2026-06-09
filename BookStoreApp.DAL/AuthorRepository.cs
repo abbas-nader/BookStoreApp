@@ -25,5 +25,10 @@ namespace BookStoreApp.DAL
                 .Where(x => !x.IsDeleted)
                 .ToListAsync();
         }
+        public async Task<Author> GetByIdAsync(int id)
+        {
+            return await _dbContext.Authors
+                .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
+        }
     }
 }

@@ -56,7 +56,9 @@
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\BookAuthor.cs" />
     <Compile Include="BookStoreDbContext.cs" />
+    <Compile Include="Entities\BookTranslator.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Translator.cs" />
     <Compile Include="IBookRepository.cs" />
     <Compile Include="Migrations\202605270827367_InitialCreate.cs" />
     <Compile Include="Migrations\202605270827367_InitialCreate.Designer.cs">
@@ -66,10 +68,19 @@
     <Compile Include="Migrations\202605271358086_AddBookCoreRelations.Designer.cs">
       <DependentUpon>202605271358086_AddBookCoreRelations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606091310281_add-translatorentity.cs" />
+    <Compile Include="Migrations\202606091310281_add-translatorentity.Designer.cs">
+      <DependentUpon>202606091310281_add-translatorentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606091313589_edit-maxlength.cs" />
+    <Compile Include="Migrations\202606091313589_edit-maxlength.Designer.cs">
+      <DependentUpon>202606091313589_edit-maxlength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Publisher.cs" />
     <Compile Include="PublisherRepository.cs" />
+    <Compile Include="TranslatorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -81,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202605271358086_AddBookCoreRelations.resx">
       <DependentUpon>202605271358086_AddBookCoreRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606091310281_add-translatorentity.resx">
+      <DependentUpon>202606091310281_add-translatorentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606091313589_edit-maxlength.resx">
+      <DependentUpon>202606091313589_edit-maxlength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

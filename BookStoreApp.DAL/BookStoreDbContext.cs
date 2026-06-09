@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStoreApp.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
@@ -16,6 +17,7 @@ namespace BookStoreApp.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
+        public DbSet<Translator>  Translators { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -66,6 +68,23 @@ namespace BookStoreApp.DAL
               .WithMany(x => x.Books)
               .HasForeignKey(x => x.CategoryId)
               .WillCascadeOnDelete(false);
+            modelBuilder.Entity<BookTranslator>()
+               .HasRequired(x => x.Book)
+               .WithMany(x => x.BookTranslators)
+               .HasForeignKey(x => x.BookId);
+            modelBuilder.Entity<BookTranslator>()
+               .HasRequired(x => x.Translator)
+               .WithMany(x => x.BookTranslators)
+               .HasForeignKey(x => x.TranslatorId);
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Translator>()
+                 .Property(x => x.FirstName)
+                 .IsRequired()
+                 .HasMaxLength(50);
+            modelBuilder.Entity<Translator>()
+                .Property(x => x.LastName)
+                .IsRequired()
+                .HasMaxLength(50);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using BookStoreApp.DAL.Entities;
+using System.Collections.Generic;
 
 namespace BookStoreApp.DAL
 {
@@ -13,6 +14,7 @@ namespace BookStoreApp.DAL
         public int PublicationYear { get; set; }
         public string Description { get; set; }
         public ICollection<BookAuthor>BookAuthors { get; set; }
+        public ICollection<BookTranslator> BookTranslators { get; set; }
         public  Category Category { get; set; }
         public Publisher Publisher { get; set; }
     }
