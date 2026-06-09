@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlTypes;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BookStoreApp.DAL
@@ -23,17 +22,15 @@ namespace BookStoreApp.DAL
 
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id, int userId)
         {
-
             var book = await _dbContext.Books.FindAsync(id);
             if (book == null)
                 return;
             book.IsDeleted = true;
             book.DeletedTime = DateTime.Now;
-            book.DeletedBy = 1;
+            book.DeletedBy = userId;
             await _dbContext.SaveChangesAsync();
-
         }
 
         public async Task<IEnumerable<Book>> GetAllAsync()
@@ -48,7 +45,7 @@ namespace BookStoreApp.DAL
             return await _dbContext.Books
                 .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
         }
-        public async Task UpdateAsync(Book book)
+        public async Task UpdateAsync(Book book, int userId)
         {
             var currentBook = await _dbContext.Books.FindAsync(book.Id);
             if (currentBook == null) return;
@@ -62,7 +59,7 @@ namespace BookStoreApp.DAL
             currentBook.Description = book.Description;
 
             currentBook.LastModifiedTime = DateTime.Now;
-            currentBook.LastModifiedBy = 1;
+            currentBook.LastModifiedBy = userId;
 
             await _dbContext.SaveChangesAsync();
         }

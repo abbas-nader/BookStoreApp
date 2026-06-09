@@ -9,8 +9,8 @@ namespace BookStoreApp.DAL
     public interface IBookRepository
     {
         Task AddAsync(Book book);
-        Task UpdateAsync(Book book);
-        Task DeleteAsync(int id);
+        Task UpdateAsync(Book book, int userId);
+        Task DeleteAsync(int id, int userId);
         Task<IEnumerable<Book>> GetAllAsync();
         Task<Book> GetByIdAsync(int id);
     }
