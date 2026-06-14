@@ -58,7 +58,11 @@
     <Compile Include="BookStoreDbContext.cs" />
     <Compile Include="Entities\BookTranslator.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderItem.cs" />
     <Compile Include="Entities\Translator.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="IBookRepository.cs" />
     <Compile Include="Migrations\202605270827367_InitialCreate.cs" />
     <Compile Include="Migrations\202605270827367_InitialCreate.Designer.cs">
@@ -75,6 +79,10 @@
     <Compile Include="Migrations\202606091313589_edit-maxlength.cs" />
     <Compile Include="Migrations\202606091313589_edit-maxlength.Designer.cs">
       <DependentUpon>202606091313589_edit-maxlength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606140924291_AddUserCustomerOrderEntities.cs" />
+    <Compile Include="Migrations\202606140924291_AddUserCustomerOrderEntities.Designer.cs">
+      <DependentUpon>202606140924291_AddUserCustomerOrderEntities.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202606091313589_edit-maxlength.resx">
       <DependentUpon>202606091313589_edit-maxlength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606140924291_AddUserCustomerOrderEntities.resx">
+      <DependentUpon>202606140924291_AddUserCustomerOrderEntities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
