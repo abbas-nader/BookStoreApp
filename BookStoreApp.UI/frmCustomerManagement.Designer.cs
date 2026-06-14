@@ -1,6 +1,6 @@
 ﻿namespace BookStoreApp.UI
 {
-    partial class frmEmployeeManagement
+    partial class frmCustomerManagement
     {
         /// <summary>
         /// Required designer variable.

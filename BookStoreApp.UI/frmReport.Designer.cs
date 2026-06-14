@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.borderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnLock = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.txtEndDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtStartDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.gbInventoryStaffReports = new System.Windows.Forms.GroupBox();
@@ -49,10 +51,8 @@
             this.lblEndDate = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
-            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBack = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLock = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMain.SuspendLayout();
             this.gbInventoryStaffReports.SuspendLayout();
             this.gbCustomer.SuspendLayout();
@@ -86,6 +86,41 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(815, 504);
             this.pnlMain.TabIndex = 0;
+            // 
+            // btnLock
+            // 
+            this.btnLock.Animated = true;
+            this.btnLock.BorderRadius = 8;
+            this.btnLock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnLock.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnLock.ForeColor = System.Drawing.Color.White;
+            this.btnLock.Location = new System.Drawing.Point(608, 4);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(54, 29);
+            this.btnLock.TabIndex = 14;
+            this.btnLock.Text = "Lock";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Animated = true;
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.BorderRadius = 8;
+            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(548, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(54, 29);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "Back";
             // 
             // txtEndDate
             // 
@@ -385,23 +420,6 @@
             this.lblReports.TabIndex = 6;
             this.lblReports.Text = "Reports";
             // 
-            // btnExit
-            // 
-            this.btnExit.Animated = true;
-            this.btnExit.BorderRadius = 8;
-            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(750, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(54, 29);
-            this.btnExit.TabIndex = 14;
-            this.btnExit.Text = "Exit";
-            // 
             // btnMinimize
             // 
             this.btnMinimize.Animated = true;
@@ -419,40 +437,22 @@
             this.btnMinimize.TabIndex = 14;
             this.btnMinimize.Text = "Minimize";
             // 
-            // btnBack
+            // btnExit
             // 
-            this.btnBack.Animated = true;
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.BorderRadius = 8;
-            this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(548, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(54, 29);
-            this.btnBack.TabIndex = 14;
-            this.btnBack.Text = "Back";
-            // 
-            // btnLock
-            // 
-            this.btnLock.Animated = true;
-            this.btnLock.BorderRadius = 8;
-            this.btnLock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLock.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLock.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.btnLock.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnLock.ForeColor = System.Drawing.Color.White;
-            this.btnLock.Location = new System.Drawing.Point(608, 4);
-            this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(54, 29);
-            this.btnLock.TabIndex = 14;
-            this.btnLock.Text = "Lock";
+            this.btnExit.Animated = true;
+            this.btnExit.BorderRadius = 8;
+            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(750, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(54, 29);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "Exit";
             // 
             // frmReport
             // 
@@ -498,9 +498,9 @@
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblReports;
-        private Guna.UI2.WinForms.Guna2Button btnMinimize;
-        private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button btnLock;
+        private Guna.UI2.WinForms.Guna2Button btnMinimize;
+        private Guna.UI2.WinForms.Guna2Button btnExit;
     }
 }

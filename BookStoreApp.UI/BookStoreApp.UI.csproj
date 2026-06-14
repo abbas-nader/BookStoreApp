@@ -71,11 +71,11 @@
     <Compile Include="frmAddOrEditDiscount.Designer.cs">
       <DependentUpon>frmAddOrEditDiscount.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddOrEditEmployee.cs">
+    <Compile Include="frmAddOrEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddOrEditEmployee.Designer.cs">
-      <DependentUpon>frmAddOrEditEmployee.cs</DependentUpon>
+    <Compile Include="frmAddOrEditCustomer.Designer.cs">
+      <DependentUpon>frmAddOrEditCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBookManagement.cs">
       <SubType>Form</SubType>
@@ -89,11 +89,11 @@
     <Compile Include="frmDiscountManagement.Designer.cs">
       <DependentUpon>frmDiscountManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEmployeeManagement.cs">
+    <Compile Include="frmCustomerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmployeeManagement.Designer.cs">
-      <DependentUpon>frmEmployeeManagement.cs</DependentUpon>
+    <Compile Include="frmCustomerManagement.Designer.cs">
+      <DependentUpon>frmCustomerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmForgetPassword.cs">
       <SubType>Form</SubType>
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="frmAddOrEditDiscount.resx">
       <DependentUpon>frmAddOrEditDiscount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddOrEditEmployee.resx">
-      <DependentUpon>frmAddOrEditEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddOrEditCustomer.resx">
+      <DependentUpon>frmAddOrEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBookManagement.resx">
       <DependentUpon>frmBookManagement.cs</DependentUpon>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="frmDiscountManagement.resx">
       <DependentUpon>frmDiscountManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmployeeManagement.resx">
-      <DependentUpon>frmEmployeeManagement.cs</DependentUpon>
+    <EmbeddedResource Include="frmCustomerManagement.resx">
+      <DependentUpon>frmCustomerManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmForgetPassword.resx">
       <DependentUpon>frmForgetPassword.cs</DependentUpon>

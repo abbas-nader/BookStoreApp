@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BookStoreApp.BLL.DTOs
+{
+    public class OrderCreateDto
+    {
+        public int UserId { get; set; }
+        public int CustomerId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public List<OrderItemCreateDto> OrderItems { get; set; }
+    }
+}

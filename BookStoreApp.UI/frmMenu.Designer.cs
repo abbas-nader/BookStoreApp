@@ -41,7 +41,6 @@
             this.btnManageBook = new Guna.UI2.WinForms.Guna2Button();
             this.btnNewSale = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.lblRule = new System.Windows.Forms.Label();
             this.lblWellCome = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +54,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMain.BackColor = System.Drawing.Color.Transparent;
             this.pnlMain.BorderRadius = 30;
             this.pnlMain.Controls.Add(this.btnLock);
             this.pnlMain.Controls.Add(this.btnBack);
@@ -67,7 +66,6 @@
             this.pnlMain.Controls.Add(this.btnManageBook);
             this.pnlMain.Controls.Add(this.btnNewSale);
             this.pnlMain.Controls.Add(this.btnManageCustomer);
-            this.pnlMain.Controls.Add(this.lblRule);
             this.pnlMain.Controls.Add(this.lblWellCome);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
@@ -163,6 +161,7 @@
             this.btnReports.Size = new System.Drawing.Size(181, 49);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "Reports";
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnDiscountCode
             // 
@@ -180,6 +179,7 @@
             this.btnDiscountCode.Size = new System.Drawing.Size(191, 49);
             this.btnDiscountCode.TabIndex = 4;
             this.btnDiscountCode.Text = "DisCountCode";
+            this.btnDiscountCode.Click += new System.EventHandler(this.btnDiscountCode_Click);
             // 
             // btnLogout
             // 
@@ -197,6 +197,7 @@
             this.btnLogout.Size = new System.Drawing.Size(181, 49);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnManageBook
             // 
@@ -214,6 +215,7 @@
             this.btnManageBook.Size = new System.Drawing.Size(209, 49);
             this.btnManageBook.TabIndex = 2;
             this.btnManageBook.Text = "Manage Book";
+            this.btnManageBook.Click += new System.EventHandler(this.btnManageBook_Click);
             // 
             // btnNewSale
             // 
@@ -231,6 +233,7 @@
             this.btnNewSale.Size = new System.Drawing.Size(191, 49);
             this.btnNewSale.TabIndex = 3;
             this.btnNewSale.Text = "NewSale";
+            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
             // 
             // btnManageCustomer
             // 
@@ -248,28 +251,18 @@
             this.btnManageCustomer.Size = new System.Drawing.Size(209, 49);
             this.btnManageCustomer.TabIndex = 1;
             this.btnManageCustomer.Text = "Manage Customer";
-            // 
-            // lblRule
-            // 
-            this.lblRule.AutoSize = true;
-            this.lblRule.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblRule.Location = new System.Drawing.Point(375, 130);
-            this.lblRule.Name = "lblRule";
-            this.lblRule.Size = new System.Drawing.Size(94, 37);
-            this.lblRule.TabIndex = 1;
-            this.lblRule.Text = "[Rule]";
+            this.btnManageCustomer.Click += new System.EventHandler(this.btnManageCustomer_Click);
             // 
             // lblWellCome
             // 
             this.lblWellCome.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWellCome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblWellCome.Location = new System.Drawing.Point(210, 47);
+            this.lblWellCome.Location = new System.Drawing.Point(210, 99);
             this.lblWellCome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWellCome.Name = "lblWellCome";
             this.lblWellCome.Size = new System.Drawing.Size(409, 83);
             this.lblWellCome.TabIndex = 0;
-            this.lblWellCome.Text = "WellCome,[FullName]";
+            this.lblWellCome.Text = "WellCome";
             this.lblWellCome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMenu
@@ -285,7 +278,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
             this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -294,7 +286,6 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm borderlessForm;
         private Guna.UI2.WinForms.Guna2Panel pnlMain;
-        private System.Windows.Forms.Label lblRule;
         private System.Windows.Forms.Label lblWellCome;
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnDiscountCode;

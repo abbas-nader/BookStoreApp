@@ -31,11 +31,11 @@ namespace BookStoreApp.BLL
         {
             Data = data;
         }
-        public static OperationResult<T> Failed(string message)
+        public static new OperationResult<T> Failed(string message)
         {
             return new OperationResult<T>(false, message, default);
         }
-        public static OperationResult<T> Success(string message, T data)
+        public static  OperationResult<T> Success(string message, T data)
         {
             return new OperationResult<T>(true, message, data);
         }

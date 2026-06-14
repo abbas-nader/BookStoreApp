@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookStoreApp.UI
 {
-    public partial class frmAddOrEditEmployee : Form
+    public partial class frmCustomerManagement : Form
     {
-        public frmAddOrEditEmployee()
+        public frmCustomerManagement()
         {
             InitializeComponent();
         }

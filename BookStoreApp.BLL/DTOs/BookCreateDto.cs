@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace BookStoreApp.BLL.DTOs
 {
-    public class BookDto
+    public class BookCreateDto
     {
-        public int? Id { get; set; }
         public string Title { get; set; }
         public string Isbn { get; set; }
+        public decimal Price { get; set; }
+        public int StockQuantity { get; set; }
         public int CategoryId { get; set; }
         public int PublisherId { get; set; }
-        public decimal Price { get; set; }
-        public List<int> AuthorIds { get; set; } =new List<int>();
-        public List<int> TranslatorIds { get; set; } = new List<int>();
+        public int PublicationYear { get; set; }
+        public string Description { get; set; }
+        public List<int> AuthorIds { get; set; }
+        public List<int> TranslatorIds { get; set; }
     }
 }
