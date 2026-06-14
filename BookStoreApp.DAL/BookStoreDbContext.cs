@@ -90,9 +90,9 @@ namespace BookStoreApp.DAL
                 .IsRequired()
                 .HasMaxLength(50);
             modelBuilder.Entity<User>()
-    .Property(x => x.FirstName)
-    .IsRequired()
-    .HasMaxLength(50);
+                .Property(x => x.FirstName)
+                .IsRequired()
+                .HasMaxLength(50);
             modelBuilder.Entity<User>()
                 .Property(x => x.LastName)
                 .IsRequired()
@@ -106,9 +106,9 @@ namespace BookStoreApp.DAL
                 .IsRequired()
                 .HasMaxLength(100);
             modelBuilder.Entity<Customer>()
-    .Property(x => x.FirstName)
-    .IsRequired()
-    .HasMaxLength(50);
+                .Property(x => x.FirstName)
+                .IsRequired()
+                .HasMaxLength(50);
             modelBuilder.Entity<Customer>()
                 .Property(x => x.LastName)
                 .IsRequired()
@@ -117,10 +117,10 @@ namespace BookStoreApp.DAL
                 .Property(x => x.Phone)
                 .HasMaxLength(11);
             modelBuilder.Entity<Order>()
-    .HasRequired(x => x.User)
-    .WithMany(x => x.Orders)
-    .HasForeignKey(x => x.UserId)
-    .WillCascadeOnDelete(false);
+                .HasRequired(x => x.User)
+                .WithMany(x => x.Orders)
+                .HasForeignKey(x => x.UserId)
+                .WillCascadeOnDelete(false);
             modelBuilder.Entity<Order>()
                 .HasRequired(x => x.Customer)
                 .WithMany(x => x.Orders)
@@ -130,9 +130,9 @@ namespace BookStoreApp.DAL
                 .Property(x => x.TotalAmount)
                 .HasPrecision(18, 2);
             modelBuilder.Entity<OrderItem>()
-    .HasRequired(x => x.Order)
-    .WithMany(x => x.OrderItems)
-    .HasForeignKey(x => x.OrderId);
+                .HasRequired(x => x.Order)
+                .WithMany(x => x.OrderItems)
+                .HasForeignKey(x => x.OrderId);
             modelBuilder.Entity<OrderItem>()
                 .HasRequired(x => x.Book)
                 .WithMany()
