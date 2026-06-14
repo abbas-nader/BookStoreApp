@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookStoreApp.DAL
 {
-    internal interface IAuthorRepository
+    internal interface IAuthorRepository : IBaseRepository<Author>
     {
     }
 }

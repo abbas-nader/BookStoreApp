@@ -14,7 +14,7 @@ namespace BookStoreApp.DAL
         {
             _dbContext = new BookStoreDbContext();
         }
-        public async Task AddAsync(Book book)
+        public async Task InsertAsync(Book book)
         {
 
             _dbContext.Books.Add(book);

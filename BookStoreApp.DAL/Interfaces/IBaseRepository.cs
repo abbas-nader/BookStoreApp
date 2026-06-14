@@ -8,7 +8,7 @@ namespace BookStoreApp.DAL
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-         Task AddAsync(T entity);
+         Task InsertAsync(T entity);
         Task UpdateAsync(T entity, int userId);
         Task DeleteAsync(int id, int userId);
         Task<IEnumerable<T>> GetAllAsync();
