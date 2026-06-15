@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constant\ValidationMessages.cs" />
     <Compile Include="DTOs\AuthorCreateDto.cs" />
     <Compile Include="DTOs\AuthorResultDto.cs" />
     <Compile Include="DTOs\AuthorUpdateDto.cs" />
@@ -75,7 +76,14 @@
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="OperationResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validations.cs" />
+    <Compile Include="Validations\AuthorValidator.cs" />
+    <Compile Include="Validations\BookValidator.cs" />
+    <Compile Include="Validations\CategoryValidator.cs" />
+    <Compile Include="Validations\CustomerValidator.cs" />
+    <Compile Include="Validations\OrderValidator.cs" />
+    <Compile Include="Validations\PublisherValidator.cs" />
+    <Compile Include="Validations\TranslatorValidator.cs" />
+    <Compile Include="Validations\UserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookStoreApp.DAL\BookStoreApp.DAL.csproj">
